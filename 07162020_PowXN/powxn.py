@@ -25,18 +25,21 @@ n -> int
 output -> float
 
 '''
-
+from functools import reduce
 def my_pow(x, n):
     if (n == 0):
         return 1
     elif (x == 1):
         return 1
     elif (n < 0):
-        x = 1//my_pow(x, n + 1)
-        return x*x      
+        x = 1//x*my_pow(x, n + 1)
+        return x      
     else:
-        x = my_pow(x, n - 1)
-        return x*x
+        x = x*my_pow(x, n - 1)
+        return x
+
+# functional paradigm
+my_pow_functional = lambda x, n: x*x*(n-1)
 
 # driver
 if __name__ == '__main__':
@@ -45,3 +48,4 @@ if __name__ == '__main__':
     n = int(n)
 
     print(my_pow(x, n))
+    print(my_pow_functional(x, n))
