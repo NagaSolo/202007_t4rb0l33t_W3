@@ -50,7 +50,7 @@ class TreeNode:
         self.right = None
 class Solution:
     def buildTree(self, inorder, postorder):
-        return TreeNode
+        pass
 
     def display_inorder(self, root):
         if root:
@@ -62,3 +62,8 @@ class Solution:
             self.display_postorder(TreeNode(root).left)
             self.display_postorder(TreeNode(root).right)
             print(TreeNode(root).val)
+# driver
+if __name__ == '__main__':
+    inorder = [9,3,15,20,7]
+    for i, j in enumerate(inorder):
+        Solution().display_inorder(j)
