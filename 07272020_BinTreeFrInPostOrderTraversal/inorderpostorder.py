@@ -36,3 +36,29 @@ Uses of Postorder:
     Postorder traversal is also useful to get the postfix expression of an expression tree. 
     Please see http://en.wikipedia.org/wiki/Reverse_Polish_notation to for the usage of postfix expression.
 '''
+# Definition for a binary tree node.
+# Input:
+#   inorder -> list of integers
+#   postorder -> list of integers
+# Output:
+#   TreeNode
+
+class TreeNode:
+    def __init__(self, val):
+        self.val = val
+        self.left = None
+        self.right = None
+class Solution:
+    def buildTree(self, inorder, postorder):
+        return TreeNode
+
+    def display_inorder(self, root):
+        if root:
+            self.display_inorder(TreeNode(root).left)
+            print(TreeNode(root).val)
+            self.display_inorder(TreeNode(root).right)
+    def display_postorder(self, root):
+        if root:
+            self.display_postorder(TreeNode(root).left)
+            self.display_postorder(TreeNode(root).right)
+            print(TreeNode(root).val)
